@@ -22,6 +22,6 @@ end
 
 --Load an existing table
 function LoadTable()
-  sqlTable = SQLTable.LoadTable('some_table_name"
+  sqlTable = SQLTable.LoadTable('some_table_name")
 end
 ```
