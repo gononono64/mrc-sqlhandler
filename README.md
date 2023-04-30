@@ -7,7 +7,7 @@ EXAMPLE -TODO-
 ```LUA
 --Create a new table via lua
 local sqlTable = nil
-function GetSQLTable()
+function CreateSQLTable()
     if sqlTable then return sqlTable end
     local primaryColumn = exports["mrc-sqlhandler"]:SQLColumn("primary_column", "string") --string or number
     local columns = {
