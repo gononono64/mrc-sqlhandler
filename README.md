@@ -4,6 +4,7 @@ Do common sql queries
 EXAMPLE -TODO-
 
 
+```LUA
 --Create a new table via lua
 local sqlTable = nil
 function GetSQLTable()
@@ -23,3 +24,4 @@ end
 function LoadTable()
   sqlTable = SQLTable.LoadTable('some_table_name"
 end
+```
