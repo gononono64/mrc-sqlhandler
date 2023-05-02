@@ -24,7 +24,7 @@ end
 
 --Load an existing table
 function LoadTable()
-  sqlTable = SQLTable.LoadTable('some_table_name")
+	sqlTable = exports["mrc-sqlhandler"]:SQLLoadTable('some_table_name")
 end
 ```
 
@@ -39,14 +39,20 @@ server_scripts {
 and do this:
 
 ```lua
-if sqlTable then return sqlTable end
-local primaryColumn = SQLColumn.New("id", "string")
-local columns = {
-    SQLColumn.New("model", "string"),
-    SQLColumn.New("location", "vector3"),
-    SQLColumn.New("targetoption", "string")
-}
-sqlTable = SQLTable.New("mrc_placedobjects", primaryColumn, columns) 
+function CreateSQLTable()
+	if sqlTable then return sqlTable end
+	local primaryColumn = SQLColumn.New("id", "string")
+	local columns = {
+	    SQLColumn.New("model", "string"),
+	    SQLColumn.New("location", "vector3"),
+	    SQLColumn.New("targetoption", "string")
+	}
+	sqlTable = SQLTable.New("mrc_placedobjects", primaryColumn, columns) 
 
-return sqlTable
+	return sqlTable
+end
+--Load an existing table
+function LoadTable()
+	sqlTable = SQLTable.LoadTable('some_table_name")
+end
 ```
