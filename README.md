@@ -1,6 +1,8 @@
 # mrc-sqlhandler
 Do common sql queries
+
 Requires https://github.com/overextended/oxmysql
+
 EXAMPLE -TODO-
 
 
